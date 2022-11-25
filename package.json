@@ -1,0 +1,17 @@
+{
+  "name": "",
+  "version": "0.1.0",
+  "description": "",
+  "type": "module",
+  "scripts": {
+    "build": "node script/build.js",
+    "dev": "node script/dev.js",
+    "lint": "npx rome check ./src",
+    "format": "npx rome format ./src"
+  },
+  "devDependencies": {
+    "barely-a-dev-server": "^0.4.1",
+    "esbuild": "^0.15.15",
+    "rome": "^10.0.1"
+  }
+}
