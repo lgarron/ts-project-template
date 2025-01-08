@@ -4,15 +4,12 @@
   "description": "",
   "type": "module",
   "scripts": {
-    "build": "node script/build.js",
-    "dev": "node script/dev.js",
-    "lint": "npx @biomejs/biome check ./script ./src",
-    "format": "npx @biomejs/biome format --write ./script ./src",
-    "clean": "rm -rf ./dist",
-    "prepack": "npm run clean && npm run build"
+    "build": "make build",
+    "dev": "make dev",
+    "prepublishOnly": "make prepublishOnly"
   },
   "devDependencies": {
-    "@biomejs/biome": "^1.7.2",
+    "@biomejs/biome": "^1.9.4",
     "barely-a-dev-server": "^0.6.1",
     "esbuild": "^0.20.2"
   }
