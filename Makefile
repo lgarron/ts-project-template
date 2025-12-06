@@ -11,9 +11,9 @@ setup:
 	bun install --no-save
 
 .PHONY: lint
-lint:
+lint: setup
 	bun x @biomejs/biome check
 
 .PHONY: format
-format:
+format: setup
 	bun x @biomejs/biome check --write
