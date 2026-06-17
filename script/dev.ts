@@ -1,4 +1,7 @@
 import { barelyServe } from "barely-a-dev-server";
-import { barelyServeCommonConfig } from "./barelyServeCommonConfig";
+import { entryRoot } from "./build";
 
-barelyServe({ ...barelyServeCommonConfig, outDir: "./.temp/dev" });
+barelyServe({
+  entryRoot,
+  outDir: "./.temp/dev",
+});

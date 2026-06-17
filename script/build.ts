@@ -1,4 +1,12 @@
 import { barelyServe } from "barely-a-dev-server";
-import { barelyServeCommonConfig } from "./barelyServeCommonConfig";
 
-barelyServe({ ...barelyServeCommonConfig, dev: false, outDir: "./dist" });
+export const entryRoot = "./src/";
+
+// biome-ignore lint/suspicious/noExplicitAny: We don't have `bun` types here.
+if ((import.meta as any).main) {
+  await barelyServe({
+    entryRoot,
+    dev: false,
+    outDir: "./dist",
+  });
+}
