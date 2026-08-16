@@ -18,7 +18,7 @@ lint: lint-biome lint-typescript
 
 .PHONY: lint-typescript
 lint-typescript:
-	bun x -- bun-dx --package @typescript/native-preview tsgo -- --project ./tsconfig.json
+	bun x -- bun-dx --package typescript tsc -- --project ./tsconfig.json
 
 .PHONY: lint-biome
 lint-biome: setup
